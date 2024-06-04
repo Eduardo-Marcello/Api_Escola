@@ -1,8 +1,8 @@
-package br.com.marcello.teste_performance_3.controller;
+package br.com.marcello.teste_performance_3.repository;
 
 import br.com.marcello.teste_performance_3.model.Curso;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CursoRepository extends CrudRepository<Curso, Integer> {
+public interface CursoRepository extends JpaRepository<Curso, Integer> {
 
 }

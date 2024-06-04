@@ -1,8 +1,11 @@
-package br.com.marcello.teste_performance_3.controller;
+package br.com.marcello.teste_performance_3.repository;
 
 import br.com.marcello.teste_performance_3.model.Aluno;
-import org.springframework.data.repository.CrudRepository;
+import br.com.marcello.teste_performance_3.model.Curso;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AlunoRepository  extends CrudRepository<Aluno, Integer> {
+import java.util.List;
 
+public interface AlunoRepository  extends JpaRepository<Aluno, Integer> {
+    List<Aluno> findByCursoId(Integer cursoId);
 }
